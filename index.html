@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD Data Guru (GitHub Pages)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Data Guru</h1>
+    <button id="add-btn" class="btn btn-primary">Tambah Guru</button>
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th>ID Guru</th>
+          <th>NIP</th>
+          <th>Nama Guru</th>
+          <th>JK</th>
+          <th>HP</th>
+          <th>Timestamp</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Modal Tambah/Edit -->
+  <div id="add-edit-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-modal-btn">&times;</span>
+      <h2 id="modal-title">Tambah Guru</h2>
+      <form id="guru-form">
+        <div>
+          <label for="id_guru">ID Guru (Otomatis)</label>
+          <input type="text" id="id_guru" name="id_guru" disabled>
+        </div>
+        <div>
+          <label for="nip">NIP</label>
+          <input type="text" id="nip" name="nip" required>
+        </div>
+        <div>
+          <label for="nama_guru">Nama Guru</label>
+          <input type="text" id="nama_guru" name="nama_guru" required>
+        </div>
+        <div>
+          <label for="jk">Jenis Kelamin</label>
+          <select id="jk" name="jk" required>
+            <option value="">Pilih...</option>
+            <option value="L">Laki-laki</option>
+            <option value="P">Perempuan</option>
+          </select>
+        </div>
+        <div>
+          <label for="hp">No. HP</label>
+          <input type="text" id="hp" name="hp" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Simpan</button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="js/guru.js"></script>
+</body>
+</html>
